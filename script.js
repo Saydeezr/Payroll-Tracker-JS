@@ -13,7 +13,8 @@ const collectEmployees = function() {
    if (true) {
     result = confirm("Do you want to add another employee?")
    } 
-   else {const addEmployeesBtn = prompt("Enter first name:")}
+   //could i use a ternary operator below?
+   if (true) {const addEmployeesBtn = prompt("Enter first name:")}
   }
 
   // TODO: Get user input to create and return an array of employee objects
