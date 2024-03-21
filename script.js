@@ -3,19 +3,34 @@ let addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
-   let addEmployeesBtn = prompt("Enter first name:");
-   if (true) {
-    lastName = prompt("Enter last name:");
-   }
-   if (true) {
-    salary = prompt("Enter salary:")
-   } 
-   if (true) {
-    result = confirm("Do you want to add another employee?")
-   } 
-   //could i use a ternary operator below?
-   if (true) {const addEmployeesBtn = prompt("Enter first name:")}
+  //  let addEmployeesBtn = prompt("Enter first name:");
+  //  if (true) {
+  //   lastName = prompt("Enter last name:");
+  //  }
+  //  if (true) {
+  //   salary = prompt("Enter salary:")
+  //  } 
+  //  if (true) {
+  //   result = confirm("Do you want to add another employee?")
+  //  } 
+  //  //why does it work with both buttons and why does it not continue to the rest of the questions?
+  //  if (true) {const addEmployeesBtn = prompt("Enter first name:")}
+  let createEmployee = true
+  const employeeArray = [];
+  while (createEmployee) {
+    let newEmployee = {
+      firstName: prompt('Enter first name:'),
+      lastName: prompt('Enter last name'),
+      salary: prompt('Enter salary')
+    }
+    console.log("newEmployee", newEmployee)
+    console.log("employeeArray", employeeArray)
+    employeeArray.push(newEmployee)
+    console.log("employeeArray after", employeeArray)
+    createEmployee= confirm('Do you want to add another employee?')
   }
+  return employeeArray;
+}
 
   // TODO: Get user input to create and return an array of employee objects
 
