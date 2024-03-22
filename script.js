@@ -23,13 +23,15 @@ const collectEmployees = function() {
 
 // Display the average salary
 const displayAverageSalary = function(employeeArray) {
-  let employeeSalarySum = 0; 
-  let numberOfEmployees = employeeArray.length;
-  for (let employeeSalarySum = 0; employeeSalarySum < employeeArray.length; employeeSalarySum++) {
-    const averageSalary = employeeArray[employeeSalarySum];
-    
+  let employeeSalary = 0; 
+  let numberOfEmployees = employeeArray.length;  
+for (const newEmployee of employeeArray;) {
+    let employeeSalary =+ employeeArray.salary
   }
-  // TODO: Calculate and display the average salary
+  console.log("employeeSalary", employeeSalary);
+
+  const averageSalary = employeeSalary / numberOfEmployees
+  console.log(`the average employee salary is ${averageSalary}`);
 }
 
 // Select a random employee
