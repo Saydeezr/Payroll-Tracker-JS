@@ -3,18 +3,6 @@ let addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
-  //  let addEmployeesBtn = prompt("Enter first name:");
-  //  if (true) {
-  //   lastName = prompt("Enter last name:");
-  //  }
-  //  if (true) {
-  //   salary = prompt("Enter salary:")
-  //  } 
-  //  if (true) {
-  //   result = confirm("Do you want to add another employee?")
-  //  } 
-  //  //why does it work with both buttons and why does it not continue to the rest of the questions?
-  //  if (true) {const addEmployeesBtn = prompt("Enter first name:")}
   let createEmployee = true
   const employeeArray = [];
   while (createEmployee) {
