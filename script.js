@@ -8,28 +8,32 @@ const collectEmployees = function() {
   while (createEmployee) {
     let newEmployee = {
       firstName: prompt('Enter first name:'),
-      lastName: prompt('Enter last name'),
-      salary: prompt('Enter salary')
+      lastName: prompt('Enter last name:'),
+      salary: prompt('Enter salary:')
     }
-    console.log("newEmployee", newEmployee)
-    console.log("employeeArray", employeeArray)
-    employeeArray.push(newEmployee)
-    console.log("employeeArray after", employeeArray)
-    createEmployee= confirm('Do you want to add another employee?')
+    console.log("newEmployee", newEmployee);
+    console.log("employeeArray", employeeArray);
+    employeeArray.push(newEmployee);
+    console.log("employeeArray after", employeeArray);
+    createEmployee= confirm('Do you want to add another employee?');
   }
   return employeeArray;
 }
 
-  // TODO: Get user input to create and return an array of employee objects
-
 
 // Display the average salary
-const displayAverageSalary = function(employeesArray) {
+const displayAverageSalary = function(employeeArray) {
+  let employeeSalarySum = 0; 
+  let numberOfEmployees = employeeArray.length;
+  for (let employeeSalarySum = 0; employeeSalarySum < employeeArray.length; employeeSalarySum++) {
+    const averageSalary = employeeArray[employeeSalarySum];
+    
+  }
   // TODO: Calculate and display the average salary
 }
 
 // Select a random employee
-const getRandomEmployee = function(employeesArray) {
+const getRandomEmployee = function(employeeArray) {
   // TODO: Select and display a random employee
 }
 
