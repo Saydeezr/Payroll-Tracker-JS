@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Employee Payroll Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="container row w-100">
+    <div class="mb-3 col">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <i class="fa fa-users icon"></i>
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <h1 class="header">Employee Payroll Tracker</h1>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>A system to track your employees efficiently within seconds!</p>
+            </div>
+        </div>
+    </div>
+    <form class="col form-container">
+        <h2 class="form-header">Employee Information</h2>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First Name">
+        </div>
+        <div class="mb-4">
+            <label for="formGroupExampleInput" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Last Name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-text">$</div>
+            <input type="text" class="form-control" id="salary" placeholder="Salary">
+        </div>
+        <button id="add-employees-btn" class="btn">Add Employee</button>
+    </form>
+</div>
+
+  <!-- <div class="wrapper">
     <header>
       <h1>Employee Payroll Tracker</h1>
     </header>
@@ -35,8 +72,8 @@
         <button id="add-employees-btn" class="btn">Add Employees</button>
       </div>
     </div>
-  </div>
+  </div> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
-
 </html>

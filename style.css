@@ -1,64 +1,95 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body {
+  font-family: sans-serif;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: url('./assets/images/background.png');
+  background-repeat: no-repeat;
 }
 
-html,
+.container {
+  width: 100%;
+  display: flex;
+  padding-top: 90px;
+}
+
+/* LEFT SIDE */
+.card {
+  background-color: #ffffff;
+  border: none;
+  font-size: 18px;
+  margin: 20px auto;
+  padding: 40px 40px;
+}
+
+.header {
+  color: #1b1b1b;
+}
+
+p {
+  color: #020202;
+  font-style: italic;
+  padding-top: 50px;
+}
+
+.icon {
+  font-size: 100px;
+  color: #284162;
+  border: #284162;
+}
+
+/* FORM */
+form {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header{
+  padding: 20px 0px;
+}
+
+.btn {
+  background-color: #345075;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+/* html,
 body,
 .wrapper {
   height: 100%;
   margin: 0;
   padding: 0;
-}
+} */
 
-body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
-}
 
-.wrapper {
+/* .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
-}
+} */
 
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
-}
 
-h2 {
-  text-align: center;
-}
-
-.card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 18px;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 40px;
-}
-
-.card-header::after {
+/* .card-header::after {
   content: " ";
   display: block;
   width: 100%;
   background: #e7e9eb;
   height: 2px;
-}
+} */
 
-.card-body {
+/* .card-body {
   min-height: 100px;
-}
+} */
 
-table {
+/* table {
   width:100%;
   border-spacing: 0;
   border-collapse: collapse;
@@ -89,24 +120,10 @@ tbody tr:nth-child(even) {
   content: " ";
   display: block;
   clear: both;
-}
+} */
 
-.btn {
-  border: none;
-  background-color: hsl(223, 74%, 48%);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
-}
 
-button[disabled] {
+/* button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
@@ -128,4 +145,4 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
-}
+} */
