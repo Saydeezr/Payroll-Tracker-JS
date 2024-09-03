@@ -72,74 +72,15 @@ form {
 .table-container{
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: start;
 }
 
 .table{
   width: 75%;
   border-collapse: collapse;
-  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 tbody tr:nth-child(even) {
   background-color: hsl(223, 64%, 90%);
 }
-
-/* table {
-  width:100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-td{
-  text-align: center;
-  border:4px solid black;
-}
-
-tbody tr:nth-child(even) {
-  background-color: hsl(223, 64%, 90%);
-}
-
-.card-footer {
-  text-align: center;
-}
-
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-} */
-
-
-/* button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
-
-
-@media (max-width: 690px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-}
-
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
-} */
