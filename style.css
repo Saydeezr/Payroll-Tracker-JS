@@ -29,6 +29,7 @@ body {
 
 .header {
   color: #1b1b1b;
+  font-size: larger;
 }
 
 p {
@@ -67,33 +68,17 @@ form {
   text-align: center;
   cursor: pointer;
 }
-/* html,
-body,
-.wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-} */
 
+.table{
+  /* display: none; */
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
 
-/* .wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-} */
-
-
-/* .card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-} */
-
-/* .card-body {
-  min-height: 100px;
-} */
+tbody tr:nth-child(even) {
+  background-color: hsl(223, 64%, 90%);
+}
 
 /* table {
   width:100%;

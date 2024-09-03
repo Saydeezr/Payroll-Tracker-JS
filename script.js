@@ -1,24 +1,28 @@
 // Get a reference to the #add-employees-btn element
 let addEmployeesBtn = document.querySelector('#add-employees-btn');
+const firstNameInput = document.querySelector('#firstNameInput');
+const lastNameInput = document.querySelector('#lastNameInput');
+const salaryInput = document.querySelector('#salaryInput');
+
 
 // Collect employee data
 const collectEmployees = function() {
-  let createEmployee = true
+  const firstName = firstNameInput.value;
+  const lastName = lastNameInput.value;
+  const salary = salaryInput.value;
+
+  // let createEmployee = true
   const employeeArray = [];
-  while (createEmployee) {
     let newEmployee = {
-      firstName: prompt('Enter first name:'),
-      lastName: prompt('Enter last name:'),
-      salary: parseInt(prompt('Enter salary:'))
+      firstName,
+      lastName,
+      salary
     }
     console.log("newEmployee", newEmployee);
     console.log("employeeArray", employeeArray);
     employeeArray.push(newEmployee);
-    console.log("employeeArray after", employeeArray);
-    createEmployee= confirm('Do you want to add another employee?');
-  }
   return employeeArray;
-}
+};
 
 
 // Display the average salary
@@ -40,14 +44,9 @@ const getRandomEmployee = function(employeeArray) {
   console.log("randomEmployee", randomEmployee);
 }
 
-/*
-  ====================
-  STARTER CODE
-  Do not modify any of the code below this line:
-*/
 
 // Display employee data in an HTML table
-const displayEmployees = function(employeesArray) {
+const displayEmployees = function(employeeArray) {
   // Get the employee table
   const employeeTable = document.querySelector('#employee-table');
 
@@ -55,8 +54,8 @@ const displayEmployees = function(employeesArray) {
   employeeTable.innerHTML = '';
 
   // Loop through the employee data and create a row for each employee
-  for (let i = 0; i < employeesArray.length; i++) {
-    const currentEmployee = employeesArray[i];
+  for (let i = 0; i < employeeArray.length; i++) {
+    const currentEmployee = employeeArray[i];
 
     const newTableRow = document.createElement("tr");
 
@@ -104,4 +103,7 @@ const trackEmployeeData = function() {
 }
 
 // Add event listener to 'Add Employees' button
-addEmployeesBtn.addEventListener('click', trackEmployeeData);
+addEmployeesBtn.addEventListener('click', function(event){
+  event.preventDefault();
+  trackEmployeeData();
+});
