@@ -47,7 +47,6 @@ const getRandomEmployee = function(employeeArray) {
 
 // Display employee data in an HTML table
 const displayEmployees = function(employeeArray) {
-  // Get the employee table
   const employeeTable = document.querySelector('#employee-table');
 
   // Clear the employee table
@@ -68,17 +67,22 @@ const displayEmployees = function(employeeArray) {
     newTableRow.append(lastNameCell);
 
     const salaryCell = document.createElement("td");
-    // Format the salary as currency
     salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US",{
       style:"currency",
       currency:"USD"
     });
 
+    //Add row/input to table
     newTableRow.append(salaryCell);
-
     employeeTable.append(newTableRow);
-
+    //show table
     document.querySelector('#employeeTable').style.display = 'table';
+    //change button text
+    document.querySelector('#add-employees-btn').textContent = 'Add Another Employee';
+    //clear out form input
+    document.getElementById('firstNameInput').value = '';
+    document.getElementById('lastNameInput').value = '';
+    document.getElementById('salaryInput').value = '';
   }
 }
 
