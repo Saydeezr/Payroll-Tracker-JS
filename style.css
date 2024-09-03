@@ -69,11 +69,17 @@ form {
   cursor: pointer;
 }
 
+.table-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 .table{
-  /* display: none; */
-  width:100%;
-  border-spacing: 0;
+  width: 75%;
   border-collapse: collapse;
+  
 }
 
 tbody tr:nth-child(even) {

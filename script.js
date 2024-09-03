@@ -77,6 +77,8 @@ const displayEmployees = function(employeeArray) {
     newTableRow.append(salaryCell);
 
     employeeTable.append(newTableRow);
+
+    document.querySelector('#employeeTable').style.display = 'table';
   }
 }
 
