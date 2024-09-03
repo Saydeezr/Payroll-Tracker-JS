@@ -1,27 +1,22 @@
 // Get a reference to the #add-employees-btn element
 let addEmployeesBtn = document.querySelector('#add-employees-btn');
-const firstNameInput = document.querySelector('#firstNameInput');
-const lastNameInput = document.querySelector('#lastNameInput');
-const salaryInput = document.querySelector('#salaryInput');
 
+const employeeArray = [];
 
 // Collect employee data
 const collectEmployees = function() {
-  const firstName = firstNameInput.value;
-  const lastName = lastNameInput.value;
-  const salary = salaryInput.value;
-
-  // let createEmployee = true
-  const employeeArray = [];
+  const firstName = document.querySelector('#firstNameInput').value;
+  const lastName = document.querySelector('#lastNameInput').value;
+  const salary = document.querySelector('#salaryInput').value;
+  
     let newEmployee = {
       firstName,
       lastName,
-      salary
+      salary: parseFloat(salary)
     }
     console.log("newEmployee", newEmployee);
-    console.log("employeeArray", employeeArray);
     employeeArray.push(newEmployee);
-  return employeeArray;
+    return employeeArray;
 };
 
 
@@ -75,6 +70,7 @@ const displayEmployees = function(employeeArray) {
     //Add row/input to table
     newTableRow.append(salaryCell);
     employeeTable.append(newTableRow);
+  }
     //show table
     document.querySelector('#employeeTable').style.display = 'table';
     //change button text
@@ -83,18 +79,13 @@ const displayEmployees = function(employeeArray) {
     document.getElementById('firstNameInput').value = '';
     document.getElementById('lastNameInput').value = '';
     document.getElementById('salaryInput').value = '';
-  }
 }
 
 const trackEmployeeData = function() {
   const employees = collectEmployees();
 
   console.table(employees);
-
   displayAverageSalary(employees);
-
-  console.log('==============================');
-
   getRandomEmployee(employees);
 
   employees.sort(function(a,b) {
